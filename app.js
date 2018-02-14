@@ -11,7 +11,6 @@ var hangman = {
     wordBank: Game.newWord.wordList,
     guessesRemaining: 10,
     guessedLetters: [],
-
     display: 0,
     currentWord: null,
     startGame: function() {
@@ -28,14 +27,14 @@ var hangman = {
             if(answer.play){
                 that.initGame();
             } else{
-                console.log("Fine, I didn't want to play anyway..");
+                console.log("Sadly, that's all I do");
             }
         })},
 
     initGame: function() {
         if(this.guessesRemaining === 10) {
-            console.log("Okay! Here we go!");
-            console.log('*****************');
+            console.log("***GAME BEGIN***");
+            console.log('****************');
             //generates random number based on the wordBank
             var num = Math.floor(Math.random()*this.wordBank.length);
             this.currentWord = new Word(this.wordBank[num]);
